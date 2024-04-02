@@ -1,1 +1,1 @@
-# django-training
+# django-training.
