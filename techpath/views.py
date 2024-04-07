@@ -5,3 +5,10 @@ def index(request):
 
 def about(request):
     return render(request, "about.html")
+
+def contact2(request):
+    return render(request, "contact2.html")
+
+
+def spotify(request):
+    return render(request, "spotify.html")
