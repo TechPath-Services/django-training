@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            max-height: 80vh; /* Maximum height of the container */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="time"],
+        input[type="date"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Attendance</h2>
+        <form action="/attendance" method="POST">
+            <label for="attendance_id">Attendance ID:</label>
+            <input type="text" id="attendance_id" name="attendance_id" required>
+
+            <label for="attendee_type">Attendee Type:</label>
+            <input type="text" id="attendee_type" name="attendee_type" required>
+
+            <label for="attendee_id">Attendee ID:</label>
+            <input type="text" id="attendee_id" name="attendee_id" required>
+
+            <label for="timing_in">Timing In:</label>
+            <input type="time" id="timing_in" name="timing_in" required>
+
+            <label for="timing_out">Timing Out:</label>
+            <input type="time" id="timing_out" name="timing_out" required>
+
+            <label for="attendance_date">Attendance Date:</label>
+            <input type="date" id="attendance_date" name="attendance_date" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
